@@ -20,7 +20,7 @@ const VinScreen = ({navigation}) => {
               shadowOpacity: 0.9,
               shadowRadius: 20,
             }}>
-            Wrong!
+            Congrat!!!
           </Text>
           <Text
             style={{
@@ -32,7 +32,19 @@ const VinScreen = ({navigation}) => {
               shadowOpacity: 0.9,
               shadowRadius: 20,
             }}>
-            Try again!
+            You are a
+          </Text>
+          <Text
+            style={{
+              fontSize: 60,
+              fontFamily: 'Chewy-Regular',
+              color: '#ed9b01',
+              shadowColor: '#ed9b01',
+              shadowOffset: {width: 0, height: 18},
+              shadowOpacity: 0.9,
+              shadowRadius: 20,
+            }}>
+            winner!!!
           </Text>
           <TouchableOpacity
             onPress={() => {

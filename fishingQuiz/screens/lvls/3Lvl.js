@@ -9,13 +9,50 @@ import {
   Modal,
 } from 'react-native';
 import {useWindowDimensions} from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const Lvl3 = ({navigation}) => {
   const {height, width} = useWindowDimensions();
-  const [timer, setTimer] = useState(300);
+  const [timer, setTimer] = useState(260);
   const [isRuning, setIsRuning] = useState(false);
   //console.log('isRuning==>', isRuning);
   const [modalIsClose, setModalIsClose] = useState(true);
+  const [Lvl4Anlock, setLvl4Anlock] = useState(false);
+
+  //////////// AsyncStorage
+  useEffect(() => {
+    getData();
+  }, []);
+
+  useEffect(() => {
+    setData();
+  }, [Lvl4Anlock]);
+
+  const setData = async () => {
+    try {
+      const data = {
+        Lvl4Anlock,
+      };
+      const jsonData = JSON.stringify(data);
+      await AsyncStorage.setItem('Lvl3', jsonData);
+      console.log('Дані збережено в AsyncStorage');
+    } catch (e) {
+      console.log('Помилка збереження даних:', e);
+    }
+  };
+
+  const getData = async () => {
+    try {
+      const jsonData = await AsyncStorage.getItem('Lvl3');
+      if (jsonData !== null) {
+        const parsedData = JSON.parse(jsonData);
+        console.log('parsedData==>', parsedData);
+        setLvl4Anlock(parsedData.Lvl4Anlock);
+      }
+    } catch (e) {
+      console.log('Помилка отримання даних:', e);
+    }
+  };
 
   ///Timer
   //эфект обратного отщета времени
@@ -183,7 +220,7 @@ const Lvl3 = ({navigation}) => {
     } else {
       if (correctAnswersCount === 4) {
         // Якщо всі 6 відповіді вірні
-
+        setLvl4Anlock(true);
         setIsRuning(false);
         setTimeout(() => {
           navigation.navigate('Lvl4');

@@ -9,10 +9,11 @@ import {
   Modal,
 } from 'react-native';
 import {useWindowDimensions} from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const Lvl10 = ({navigation}) => {
   const {height, width} = useWindowDimensions();
-  const [timer, setTimer] = useState(300);
+  const [timer, setTimer] = useState(120);
   const [isRuning, setIsRuning] = useState(false);
   //console.log('isRuning==>', isRuning);
   const [modalIsClose, setModalIsClose] = useState(true);
@@ -180,7 +181,7 @@ const Lvl10 = ({navigation}) => {
 
         setIsRuning(false);
         setTimeout(() => {
-          navigation.navigate('Home');
+          navigation.navigate('VinScreen');
         }, 1000);
       } else {
         Alert.alert('Congratulations! You have completed all questions.');
