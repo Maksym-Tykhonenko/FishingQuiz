@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {
+  Image,
   ImageBackground,
   ScrollView,
   Text,
@@ -9,13 +10,14 @@ import {
 import {useWindowDimensions} from 'react-native';
 
 const LvlSelectionScreen = ({navigation}) => {
+  const {height, width} = useWindowDimensions();
   return (
     <View style={{flex: 1}}>
       <ImageBackground source={require('../assets/bgr.png')} style={{flex: 1}}>
         <View
           style={{
             flex: 1,
-            marginTop: 50,
+            marginTop: 70,
             position: 'relative',
             alignItems: 'center',
           }}>
@@ -27,20 +29,29 @@ const LvlSelectionScreen = ({navigation}) => {
                   navigation.navigate('Lvl1');
                 }}
                 style={{
-                  width: 300,
-                  height: 60,
+                  width: width * 0.9,
+                  height: 300,
                   marginBottom: 20,
                   borderWidth: 2,
                   borderColor: '#fff',
                   borderRadius: 30,
                   alignItems: 'center',
-                  justifyContent: 'center',
+                  //justifyContent: 'center',
                   backgroundColor: 'rgba(255, 255, 255, 0.5)',
                   shadowColor: '#fff',
                   shadowOffset: {width: 0, height: 18},
                   shadowOpacity: 0.9,
                   shadowRadius: 10,
                 }}>
+                <Image
+                  source={require('../assets/lvlsBcgr/first.jpeg')}
+                  style={{
+                    height: 255,
+                    width: width * 0.9 - 4,
+                    borderTopRightRadius: 30,
+                    borderTopLeftRadius: 30,
+                  }}
+                />
                 <Text
                   style={{
                     fontSize: 30,
@@ -61,20 +72,29 @@ const LvlSelectionScreen = ({navigation}) => {
                   navigation.navigate('Lvl2');
                 }}
                 style={{
-                  width: 300,
-                  height: 60,
+                  width: width * 0.9,
+                  height: 300,
                   marginBottom: 20,
                   borderWidth: 2,
                   borderColor: '#fff',
                   borderRadius: 30,
                   alignItems: 'center',
-                  justifyContent: 'center',
+                  //justifyContent: 'center',
                   backgroundColor: 'rgba(255, 255, 255, 0.5)',
                   shadowColor: '#fff',
                   shadowOffset: {width: 0, height: 18},
                   shadowOpacity: 0.9,
                   shadowRadius: 10,
                 }}>
+                <Image
+                  source={require('../assets/lvlsBcgr/first1.jpeg')}
+                  style={{
+                    height: 255,
+                    width: width * 0.9 - 4,
+                    borderTopRightRadius: 30,
+                    borderTopLeftRadius: 30,
+                  }}
+                />
                 <Text
                   style={{
                     fontSize: 30,
@@ -95,20 +115,28 @@ const LvlSelectionScreen = ({navigation}) => {
                   navigation.navigate('Lvl3');
                 }}
                 style={{
-                  width: 300,
-                  height: 60,
+                  width: width * 0.9,
+                  height: 300,
                   marginBottom: 20,
                   borderWidth: 2,
                   borderColor: '#fff',
                   borderRadius: 30,
                   alignItems: 'center',
-                  justifyContent: 'center',
                   backgroundColor: 'rgba(255, 255, 255, 0.5)',
                   shadowColor: '#fff',
                   shadowOffset: {width: 0, height: 18},
                   shadowOpacity: 0.9,
                   shadowRadius: 10,
                 }}>
+                <Image
+                  source={require('../assets/lvlsBcgr/second.jpeg')}
+                  style={{
+                    height: 255,
+                    width: width * 0.9 - 4,
+                    borderTopRightRadius: 30,
+                    borderTopLeftRadius: 30,
+                  }}
+                />
                 <Text
                   style={{
                     fontSize: 30,
@@ -129,20 +157,29 @@ const LvlSelectionScreen = ({navigation}) => {
                   navigation.navigate('Lvl4');
                 }}
                 style={{
-                  width: 300,
-                  height: 60,
+                  width: width * 0.9,
+                  height: 300,
                   marginBottom: 20,
                   borderWidth: 2,
                   borderColor: '#fff',
                   borderRadius: 30,
                   alignItems: 'center',
-                  justifyContent: 'center',
+                  //justifyContent: 'center',
                   backgroundColor: 'rgba(255, 255, 255, 0.5)',
                   shadowColor: '#fff',
                   shadowOffset: {width: 0, height: 18},
                   shadowOpacity: 0.9,
                   shadowRadius: 10,
                 }}>
+                <Image
+                  source={require('../assets/lvlsBcgr/second1.jpg')}
+                  style={{
+                    height: 255,
+                    width: width * 0.9 - 4,
+                    borderTopRightRadius: 30,
+                    borderTopLeftRadius: 30,
+                  }}
+                />
                 <Text
                   style={{
                     fontSize: 30,
@@ -163,20 +200,29 @@ const LvlSelectionScreen = ({navigation}) => {
                   navigation.navigate('Lvl5');
                 }}
                 style={{
-                  width: 300,
-                  height: 60,
+                  width: width * 0.9,
+                  height: 300,
                   marginBottom: 20,
                   borderWidth: 2,
                   borderColor: '#fff',
                   borderRadius: 30,
                   alignItems: 'center',
-                  justifyContent: 'center',
+                  //justifyContent: 'center',
                   backgroundColor: 'rgba(255, 255, 255, 0.5)',
                   shadowColor: '#fff',
                   shadowOffset: {width: 0, height: 18},
                   shadowOpacity: 0.9,
                   shadowRadius: 10,
                 }}>
+                <Image
+                  source={require('../assets/lvlsBcgr/fird.jpg')}
+                  style={{
+                    height: 255,
+                    width: width * 0.9 - 4,
+                    borderTopRightRadius: 30,
+                    borderTopLeftRadius: 30,
+                  }}
+                />
                 <Text
                   style={{
                     fontSize: 30,
@@ -197,20 +243,29 @@ const LvlSelectionScreen = ({navigation}) => {
                   navigation.navigate('Lvl6');
                 }}
                 style={{
-                  width: 300,
-                  height: 60,
+                  width: width * 0.9,
+                  height: 300,
                   marginBottom: 20,
                   borderWidth: 2,
                   borderColor: '#fff',
                   borderRadius: 30,
                   alignItems: 'center',
-                  justifyContent: 'center',
+                  //justifyContent: 'center',
                   backgroundColor: 'rgba(255, 255, 255, 0.5)',
                   shadowColor: '#fff',
                   shadowOffset: {width: 0, height: 18},
                   shadowOpacity: 0.9,
                   shadowRadius: 10,
                 }}>
+                <Image
+                  source={require('../assets/lvlsBcgr/fird1.jpeg')}
+                  style={{
+                    height: 255,
+                    width: width * 0.9 - 4,
+                    borderTopRightRadius: 30,
+                    borderTopLeftRadius: 30,
+                  }}
+                />
                 <Text
                   style={{
                     fontSize: 30,
@@ -231,20 +286,29 @@ const LvlSelectionScreen = ({navigation}) => {
                   navigation.navigate('Lvl7');
                 }}
                 style={{
-                  width: 300,
-                  height: 60,
+                  width: width * 0.9,
+                  height: 300,
                   marginBottom: 20,
                   borderWidth: 2,
                   borderColor: '#fff',
                   borderRadius: 30,
                   alignItems: 'center',
-                  justifyContent: 'center',
+                  //justifyContent: 'center',
                   backgroundColor: 'rgba(255, 255, 255, 0.5)',
                   shadowColor: '#fff',
                   shadowOffset: {width: 0, height: 18},
                   shadowOpacity: 0.9,
                   shadowRadius: 10,
                 }}>
+                <Image
+                  source={require('../assets/lvlsBcgr/four.webp')}
+                  style={{
+                    height: 255,
+                    width: width * 0.9 - 4,
+                    borderTopRightRadius: 30,
+                    borderTopLeftRadius: 30,
+                  }}
+                />
                 <Text
                   style={{
                     fontSize: 30,
@@ -265,20 +329,29 @@ const LvlSelectionScreen = ({navigation}) => {
                   navigation.navigate('Lvl8');
                 }}
                 style={{
-                  width: 300,
-                  height: 60,
+                  width: width * 0.9,
+                  height: 300,
                   marginBottom: 20,
                   borderWidth: 2,
                   borderColor: '#fff',
                   borderRadius: 30,
                   alignItems: 'center',
-                  justifyContent: 'center',
+                  //justifyContent: 'center',
                   backgroundColor: 'rgba(255, 255, 255, 0.5)',
                   shadowColor: '#fff',
                   shadowOffset: {width: 0, height: 18},
                   shadowOpacity: 0.9,
                   shadowRadius: 10,
                 }}>
+                <Image
+                  source={require('../assets/lvlsBcgr/four1.jpeg')}
+                  style={{
+                    height: 255,
+                    width: width * 0.9 - 4,
+                    borderTopRightRadius: 30,
+                    borderTopLeftRadius: 30,
+                  }}
+                />
                 <Text
                   style={{
                     fontSize: 30,
@@ -299,20 +372,29 @@ const LvlSelectionScreen = ({navigation}) => {
                   navigation.navigate('Lvl9');
                 }}
                 style={{
-                  width: 300,
-                  height: 60,
+                  width: width * 0.9,
+                  height: 300,
                   marginBottom: 20,
                   borderWidth: 2,
                   borderColor: '#fff',
                   borderRadius: 30,
                   alignItems: 'center',
-                  justifyContent: 'center',
+                  //justifyContent: 'center',
                   backgroundColor: 'rgba(255, 255, 255, 0.5)',
                   shadowColor: '#fff',
                   shadowOffset: {width: 0, height: 18},
                   shadowOpacity: 0.9,
                   shadowRadius: 10,
                 }}>
+                <Image
+                  source={require('../assets/lvlsBcgr/five.jpeg')}
+                  style={{
+                    height: 255,
+                    width: width * 0.9 - 4,
+                    borderTopRightRadius: 30,
+                    borderTopLeftRadius: 30,
+                  }}
+                />
                 <Text
                   style={{
                     fontSize: 30,
@@ -333,20 +415,29 @@ const LvlSelectionScreen = ({navigation}) => {
                   navigation.navigate('Lvl10');
                 }}
                 style={{
-                  width: 300,
-                  height: 60,
+                  width: width * 0.9,
+                  height: 300,
                   marginBottom: 20,
                   borderWidth: 2,
                   borderColor: '#fff',
                   borderRadius: 30,
                   alignItems: 'center',
-                  justifyContent: 'center',
+                  //justifyContent: 'center',
                   backgroundColor: 'rgba(255, 255, 255, 0.5)',
                   shadowColor: '#fff',
                   shadowOffset: {width: 0, height: 18},
                   shadowOpacity: 0.9,
                   shadowRadius: 10,
                 }}>
+                <Image
+                  source={require('../assets/lvlsBcgr/five1.jpeg')}
+                  style={{
+                    height: 255,
+                    width: width * 0.9 - 4,
+                    borderTopRightRadius: 30,
+                    borderTopLeftRadius: 30,
+                  }}
+                />
                 <Text
                   style={{
                     fontSize: 30,
@@ -366,7 +457,22 @@ const LvlSelectionScreen = ({navigation}) => {
 
           {/**BTN BACK */}
           <TouchableOpacity
-            style={{position: 'absolute', bottom: 10, right: 10}}
+            style={{
+              position: 'absolute',
+              bottom: 10,
+              right: 10,
+              borderWidth: 2,
+              borderColor: '#fff',
+              borderRadius: 20,
+              backgroundColor: 'rgba(255, 255, 255, 0.5)',
+              alignItems: 'center',
+              justifyContent: 'center',
+              paddingHorizontal: 10,
+              shadowColor: '#fff',
+              shadowOffset: {width: 0, height: 18},
+              shadowOpacity: 0.9,
+              shadowRadius: 20,
+            }}
             onPress={() => {
               navigation.goBack();
             }}>
@@ -374,11 +480,11 @@ const LvlSelectionScreen = ({navigation}) => {
               style={{
                 fontSize: 40,
                 fontFamily: 'Chewy-Regular',
-                color: '#fff',
-                shadowColor: '#fff',
+                color: '#ed9b01',
+                shadowColor: '#ed9b01',
                 shadowOffset: {width: 0, height: 18},
                 shadowOpacity: 0.9,
-                shadowRadius: 10,
+                shadowRadius: 20,
               }}>
               Back
             </Text>

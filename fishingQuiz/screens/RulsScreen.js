@@ -22,7 +22,22 @@ const RulsScreen = ({navigation}) => {
           <Text>Rulse Screen</Text>
 
           <TouchableOpacity
-            style={{position: 'absolute', bottom: 10, right: 10}}
+            style={{
+              position: 'absolute',
+              bottom: 10,
+              right: 10,
+              borderWidth: 2,
+              borderColor: '#fff',
+              borderRadius: 20,
+              backgroundColor: 'rgba(255, 255, 255, 0.5)',
+              alignItems: 'center',
+              justifyContent: 'center',
+              paddingHorizontal: 10,
+              shadowColor: '#fff',
+              shadowOffset: {width: 0, height: 18},
+              shadowOpacity: 0.9,
+              shadowRadius: 20,
+            }}
             onPress={() => {
               navigation.goBack();
             }}>
@@ -30,11 +45,11 @@ const RulsScreen = ({navigation}) => {
               style={{
                 fontSize: 40,
                 fontFamily: 'Chewy-Regular',
-                color: '#fff',
-                shadowColor: '#fff',
+                color: '#ed9b01',
+                shadowColor: '#ed9b01',
                 shadowOffset: {width: 0, height: 18},
                 shadowOpacity: 0.9,
-                shadowRadius: 10,
+                shadowRadius: 20,
               }}>
               Back
             </Text>
