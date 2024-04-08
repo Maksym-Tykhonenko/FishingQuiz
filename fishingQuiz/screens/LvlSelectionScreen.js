@@ -146,7 +146,9 @@ const LvlSelectionScreen = ({navigation}) => {
 
   return (
     <View style={{flex: 1}}>
-      <ImageBackground source={require('../assets/bgr.png')} style={{flex: 1}}>
+      <ImageBackground
+        source={require('../assets/backgr.jpg')}
+        style={{flex: 1}}>
         <View
           style={{
             flex: 1,

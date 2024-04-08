@@ -175,7 +175,13 @@ const Lvl5 = ({navigation}) => {
           width: width * 0.9,
           //justifyContent: 'space-between',
         }}>
-        <View>
+        <View
+          style={{
+            borderWidth: 3,
+            borderRadius: 15,
+            borderColor: '#ed9b01',
+            backgroundColor: 'rgba(255, 255, 255, 0.7)',
+          }}>
           <Text
             style={{
               fontSize: 30,
@@ -187,7 +193,15 @@ const Lvl5 = ({navigation}) => {
           </Text>
         </View>
 
-        <View style={{alignItems: 'center'}}>
+        <View
+          style={{
+            marginTop: 10,
+            alignItems: 'center',
+            borderWidth: 3,
+            borderRadius: 15,
+            borderColor: '#ed9b01',
+            backgroundColor: 'rgba(255, 255, 255, 0.7)',
+          }}>
           <ScrollView>
             {question.options.map((option, index) => (
               <TouchableOpacity
@@ -240,7 +254,7 @@ const Lvl5 = ({navigation}) => {
   return (
     <View style={{flex: 1}}>
       <ImageBackground
-        source={require('../../assets/bgr.png')}
+        source={require('../../assets/backgr.jpg')}
         style={{flex: 1}}>
         <View
           style={{

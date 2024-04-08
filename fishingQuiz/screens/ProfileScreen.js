@@ -146,7 +146,9 @@ const ProfileScreen = ({navigation}) => {
 
   return (
     <View style={{flex: 1}}>
-      <ImageBackground source={require('../assets/bgr.png')} style={{flex: 1}}>
+      <ImageBackground
+        source={require('../assets/backgr.jpg')}
+        style={{flex: 1}}>
         <View
           style={{
             flex: 1,
@@ -271,7 +273,7 @@ const ProfileScreen = ({navigation}) => {
                   paddingLeft: 10,
                   fontSize: 20,
                   borderWidth: 3,
-                  //borderColor: '#fff',
+                  borderColor: '#fff',
                   color: '#000',
                   backgroundColor: 'rgba(255, 255, 255, 0.5)',
                   borderRadius: 15,
