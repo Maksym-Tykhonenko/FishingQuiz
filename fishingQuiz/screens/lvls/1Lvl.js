@@ -14,6 +14,9 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 const Lvl1 = ({navigation}) => {
   const {height, width} = useWindowDimensions();
   const [timer, setTimer] = useState(300);
+  //console.log('timer: ', timer);
+  const [finalTime, setFinalTime] = useState('');
+  //console.log('finalTime', finalTime);
   const [isRuning, setIsRuning] = useState(false);
   //console.log('isRuning==>', isRuning);
   const [modalIsClose, setModalIsClose] = useState(true);
@@ -26,12 +29,13 @@ const Lvl1 = ({navigation}) => {
 
   useEffect(() => {
     setData();
-  }, [Lvl2Anlock]);
+  }, [Lvl2Anlock, finalTime]);
 
   const setData = async () => {
     try {
       const data = {
         Lvl2Anlock,
+        finalTime,
       };
       const jsonData = JSON.stringify(data);
       await AsyncStorage.setItem('Lvl1', jsonData);
@@ -48,6 +52,7 @@ const Lvl1 = ({navigation}) => {
         const parsedData = JSON.parse(jsonData);
         console.log('parsedData==>', parsedData);
         setLvl2Anlock(parsedData.Lvl2Anlock);
+        setFinalTime(parsedData.finalTime);
       }
     } catch (e) {
       console.log('Помилка отримання даних:', e);
@@ -222,6 +227,8 @@ const Lvl1 = ({navigation}) => {
         // Якщо всі 6 відповіді вірні
         setLvl2Anlock(true);
         setIsRuning(false);
+        setFinalTime(timer);
+        console.log('finalTime in IF', finalTime);
         setTimeout(() => {
           navigation.navigate('Lvl2');
         }, 1000);

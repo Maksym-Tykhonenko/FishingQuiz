@@ -21,6 +21,7 @@ import Lvl10 from './screens/lvls/10Lvl';
 
 import WrongScreen from './screens/WrongScreen';
 import VinScreen from './screens/VinScreen';
+import ProfileScreen from './screens/ProfileScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -115,6 +116,12 @@ const App = () => {
         <Stack.Screen
           name="VinScreen"
           component={VinScreen}
+          options={{headerShown: false}}
+        />
+
+        <Stack.Screen
+          name="ProfileScreen"
+          component={ProfileScreen}
           options={{headerShown: false}}
         />
       </Stack.Navigator>
